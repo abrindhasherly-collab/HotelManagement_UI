@@ -1,23 +1,62 @@
-<h2>Login</h2>
+<div class="login-page">
 
-<div>
-  <label>Email</label>
-  <input
-    type="email"
-    [(ngModel)]="email"
-    placeholder="Enter email">
+  <!-- Animated Background -->
+  <div class="background">
+    <div class="circle circle1"></div>
+    <div class="circle circle2"></div>
+    <div class="circle circle3"></div>
+
+    <div class="building building1"></div>
+    <div class="building building2"></div>
+    <div class="building building3"></div>
+  </div>
+
+  <!-- Login Card -->
+  <div class="login-card">
+
+    <div class="hotel-icon">
+      🏨
+    </div>
+
+    <h2>Welcome Back</h2>
+
+    <p class="subtitle">
+      Hotel Management System
+    </p>
+
+    <!-- Email -->
+    <div class="input-group">
+
+      <label>Email</label>
+
+      <input
+        type="email"
+        [(ngModel)]="email"
+        placeholder="Enter email">
+
+    </div>
+
+    <!-- Password -->
+    <div class="input-group">
+
+      <label>Password</label>
+
+      <input
+        type="password"
+        [(ngModel)]="password"
+        placeholder="Enter password">
+
+    </div>
+
+    <button class="login-btn" (click)="login()">
+      Login
+      <span>→</span>
+    </button>
+
+    <p class="footer-text">
+      Welcome to our Hotel Management System
+    </p>
+
+  </div>
+
 </div>
-
-<br>
-
-<div>
-  <label>Password</label>
-  <input
-    type="password"
-    [(ngModel)]="password"
-    placeholder="Enter password">
-</div>
-
-<br>
-
-<button (click)="login()">Login</button>
