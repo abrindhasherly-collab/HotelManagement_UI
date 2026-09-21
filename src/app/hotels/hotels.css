@@ -1,0 +1,441 @@
+/* Main page */
+
+.hotel-page {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+
+/* =========================
+   ANIMATED BACKGROUND
+   ========================= */
+
+.background-animation {
+  position: fixed;
+  inset: 0;
+
+  background: linear-gradient(
+    135deg,
+    #0f2027,
+    #203a43,
+    #2c5364
+  );
+
+  overflow: hidden;
+  z-index: 0;
+}
+
+
+/* =========================
+   FLOATING CIRCLES
+   ========================= */
+
+.circle {
+  position: absolute;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  animation: floating 8s ease-in-out infinite;
+}
+
+
+.circle1 {
+  width: 250px;
+  height: 250px;
+
+  left: 5%;
+  top: 10%;
+}
+
+
+.circle2 {
+  width: 350px;
+  height: 350px;
+
+  right: 5%;
+  bottom: -100px;
+
+  animation-delay: 2s;
+}
+
+
+.circle3 {
+  width: 150px;
+  height: 150px;
+
+  right: 35%;
+  top: 50%;
+
+  animation-delay: 4s;
+}
+
+
+@keyframes floating {
+
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-40px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+
+}
+
+
+/* =========================
+   HOTEL BUILDINGS
+   ========================= */
+
+.building {
+  position: absolute;
+
+  bottom: 0;
+
+  background: rgba(255, 255, 255, 0.06);
+
+  border-radius: 8px 8px 0 0;
+}
+
+
+/* Building 1 */
+
+.building1 {
+  width: 150px;
+  height: 280px;
+
+  left: 5%;
+}
+
+
+/* Building 2 */
+
+.building2 {
+  width: 220px;
+  height: 400px;
+
+  left: 40%;
+}
+
+
+/* Building 3 */
+
+.building3 {
+  width: 170px;
+  height: 320px;
+
+  right: 5%;
+}
+
+
+/* =========================
+   BUILDING WINDOWS
+   ========================= */
+
+.building::before {
+
+  content: "";
+
+  position: absolute;
+
+  top: 30px;
+  left: 30px;
+
+  width: 20px;
+  height: 20px;
+
+  background: rgba(255, 255, 255, 0.2);
+
+  box-shadow:
+
+    45px 0 rgba(255, 255, 255, 0.2),
+
+    90px 0 rgba(255, 255, 255, 0.2),
+
+    0 50px rgba(255, 255, 255, 0.2),
+
+    45px 50px rgba(255, 255, 255, 0.2),
+
+    90px 50px rgba(255, 255, 255, 0.2),
+
+    0 100px rgba(255, 255, 255, 0.2),
+
+    45px 100px rgba(255, 255, 255, 0.2),
+
+    90px 100px rgba(255, 255, 255, 0.2);
+
+}
+
+
+/* =========================
+   CONTENT
+   ========================= */
+
+.content {
+
+  position: relative;
+
+  z-index: 2;
+
+  min-height: 100vh;
+
+  padding: 50px 30px;
+
+}
+
+
+/* =========================
+   TITLE
+   ========================= */
+
+h1 {
+
+  text-align: center;
+
+  color: white;
+
+  font-size: 40px;
+
+  margin-bottom: 10px;
+
+  animation: titleAnimation 1.5s ease;
+
+}
+
+
+.subtitle {
+
+  text-align: center;
+
+  color: #d9f3ff;
+
+  font-size: 18px;
+
+  margin-bottom: 40px;
+
+}
+
+
+@keyframes titleAnimation {
+
+  from {
+
+    opacity: 0;
+
+    transform: translateY(-30px);
+
+  }
+
+  to {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+  }
+
+}
+
+
+/* =========================
+   HOTEL CARDS
+   ========================= */
+
+.hotel-container {
+
+  display: flex;
+
+  justify-content: center;
+
+  gap: 30px;
+
+  flex-wrap: wrap;
+
+}
+
+
+/* Card */
+
+.hotel-card {
+
+  width: 280px;
+
+  padding: 30px;
+
+  text-align: center;
+
+  background: rgba(255, 255, 255, 0.95);
+
+  border-radius: 20px;
+
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.25);
+
+  transition: 0.4s;
+
+  animation: cardAnimation 1s ease;
+
+}
+
+
+/* Card hover */
+
+.hotel-card:hover {
+
+  transform: translateY(-12px) scale(1.03);
+
+  box-shadow:
+    0 25px 45px rgba(0, 0, 0, 0.35);
+
+}
+
+
+/* Hotel icon */
+
+.hotel-icon {
+
+  font-size: 55px;
+
+  margin-bottom: 10px;
+
+}
+
+
+/* Hotel name */
+
+.hotel-card h2 {
+
+  color: #203a43;
+
+  margin-bottom: 15px;
+
+}
+
+
+/* Location */
+
+.location {
+
+  color: #555;
+
+  font-size: 16px;
+
+}
+
+
+/* Price */
+
+.price {
+
+  color: #1d7a8c;
+
+  font-size: 24px;
+
+  font-weight: bold;
+
+  margin: 20px 0;
+
+}
+
+
+.price span {
+
+  font-size: 14px;
+
+  color: #777;
+
+  font-weight: normal;
+
+}
+
+
+/* Button */
+
+.hotel-card button {
+
+  border: none;
+
+  padding: 12px 25px;
+
+  border-radius: 25px;
+
+  background: #203a43;
+
+  color: white;
+
+  font-size: 15px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+
+}
+
+
+.hotel-card button:hover {
+
+  background: #2c5364;
+
+  transform: scale(1.05);
+
+}
+
+
+/* Card animation */
+
+@keyframes cardAnimation {
+
+  from {
+
+    opacity: 0;
+
+    transform: translateY(40px);
+
+  }
+
+  to {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+  }
+
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 768px) {
+
+  h1 {
+
+    font-size: 30px;
+
+  }
+
+  .hotel-container {
+
+    flex-direction: column;
+
+    align-items: center;
+
+  }
+
+  .hotel-card {
+
+    width: 80%;
+
+  }
+
+}

@@ -1,0 +1,39 @@
+h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 25px;
+}
+
+div {
+  width: 350px;
+  margin: 10px auto;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 30px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #218838;
+}

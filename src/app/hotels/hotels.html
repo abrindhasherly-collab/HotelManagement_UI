@@ -1,1 +1,55 @@
-<p>hotels works!</p>
+<div class="hotel-page">
+
+  <!-- Animated Background -->
+  <div class="background-animation">
+    <div class="building building1"></div>
+    <div class="building building2"></div>
+    <div class="building building3"></div>
+
+    <div class="circle circle1"></div>
+    <div class="circle circle2"></div>
+    <div class="circle circle3"></div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="content">
+
+    <h1>🏨 Hotel Management System</h1>
+
+    <p class="subtitle">
+      Find your perfect stay
+    </p>
+
+    <div class="hotel-container">
+
+      @for (hotel of hotels; track hotel.id) {
+
+        <div class="hotel-card">
+
+          <div class="hotel-icon">
+            🏨
+          </div>
+
+          <h2>{{ hotel.name }}</h2>
+
+          <p class="location">
+            📍 {{ hotel.location }}
+          </p>
+
+          <p class="price">
+            ₹{{ hotel.price }} <span>/ night</span>
+          </p>
+
+          <button>
+            View Details
+          </button>
+
+        </div>
+
+      }
+
+    </div>
+
+  </div>
+
+</div>
